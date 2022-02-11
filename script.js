@@ -31,14 +31,7 @@ fetch(
 var prevFollowers = []; // save your prev followers localy
 
 function findDiff(newFollowers) {
-  let array3 = prevFollowers.filter(function (obj) {
-    if (newFollowers.indexOf(obj) == -1) return true;
-    return false;
-  });
-  let array4 = newFollowers.filter(function (obj) {
-    if (prevFollowers.indexOf(obj) == -1) return true;
-    return false;
-  });
-    
-  console.log({ removed: array3 }, { added: array4 });
+  let removed = prevFollowers.filter(obj => (newFollowers.indexOf(obj) == -1) );
+  let addded = newFollowers.filter(obj => prevFollowers.indexOf(obj) == -1));
+  console.log({ removed, added });
 }
